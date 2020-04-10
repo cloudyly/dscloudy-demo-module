@@ -6,6 +6,6 @@
 import DemoDetails from '../../components/demo-details'
 export default {
   name: '{{componentName}}Edit',
-  components: { {{componentName}}Details }
+  components: { DemoDetails }
 }
 </script>
