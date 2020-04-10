@@ -6,27 +6,27 @@ export default [
   {
     isModule: true,
     redirect: 'noredirect',
-    name: 'cms',
+    name: '{{moduleName}}',
     meta: {
-      title: 'Demo模块'
+      title: '{{componentName}}模块'
     },
     children: [
       {
         root: false,
-        path: '/demo',
+        path: '/{{moduleName}}',
         component: Layout,
-        name: 'Demo',
+        name: '{{componentName}}',
         meta: {
-          title: 'Demo示例',
+          title: '{{componentName}}示例',
           icon: 'ds-tongzhigonggao'
         },
         children: [
           {
-            path: 'demo_list',
-            component: _import('demo/pages/demo/list'),
-            name: 'DemoList',
+            path: '{{moduleName}}_list',
+            component: _import('{{moduleName}}/pages/{{moduleName}}/list'),
+            name: '{{componentName}}List',
             meta: {
-              title: '通用CRUD',
+              title: '{{componentName}}',
               btnList: [
                 { code: '10001', title: '新增', icon: 'el-icon-plus' },
                 { code: '10002', title: '查看', icon: 'el-icon-view' },
@@ -39,38 +39,30 @@ export default [
             }
           },
           {
-            path: 'demo_add',
-            component: _import('demo/pages/demo/add'),
-            name: 'DemoAdd',
+            path: '{{moduleName}}_add',
+            component: _import('{{moduleName}}/pages/{{moduleName}}/add'),
+            name: '{{componentName}}Add',
             hidden: true,
             meta: {
-              title: '通用CRUD-新增'
+              title: '{{componentName}}-新增'
             }
           },
           {
-            path: 'demo_view/:id(\\d+)',
+            path: '{{moduleName}}_view/:id(\\d+)',
             hidden: true,
-            component: _import('demo/pages/demo/view'),
-            name: 'DemoView',
+            component: _import('{{moduleName}}/pages/{{moduleName}}/view'),
+            name: '{{componentName}}View',
             meta: {
-              title: '通用CRUD-详情'
+              title: '{{componentName}}-详情'
             }
           },
           {
-            path: 'demo_edit/:id(\\d+)',
+            path: '{{moduleName}}_edit/:id(\\d+)',
             hidden: true,
-            component: _import('demo/pages/demo/edit'),
-            name: 'DemoEdit',
+            component: _import('{{moduleName}}/pages/{{moduleName}}/edit'),
+            name: '{{componentName}}Edit',
             meta: {
-              title: '通用CRUD-编辑'
-            }
-          },
-          {
-            path: 'news_list',
-            component: _import('demo/pages/news/list'),
-            name: 'NewsList',
-            meta: {
-              title: '新闻发布'
+              title: '{{componentName}}-编辑'
             }
           }
         ]

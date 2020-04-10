@@ -11,7 +11,7 @@
 import urls from '@/config/urls'
 
 export default {
-  name: 'DemoList',
+  name: '{{componentName}}List',
   data () {
     return {
       dialogVisible: true,
@@ -24,7 +24,7 @@ export default {
         ]
       },
       dataListCfg: {
-        url: urls.demo.demoList,
+        url: urls.{{moduleName}}.demoList,
         selection: true,
         title: '通用CRUD',
         itemList: [
@@ -79,7 +79,7 @@ export default {
     },
     onBtnAddClick () {
       this.$router.push({
-        path: '/demo/demo_add'
+        path: '/{{moduleName}}/{{moduleName}}_add'
       })
     },
     onBtnDeleteClick (item) {
@@ -89,12 +89,12 @@ export default {
     },
     onBtnEditClick (item) {
       this.$router.push({
-        path: `/demo/demo_edit/${item.id}`
+        path: `/{{moduleName}}/{{moduleName}}_edit/${item.id}`
       })
     },
     onBtnViewClick (item) {
       this.$router.push({
-        path: `/demo/demo_view/${item.id}`
+        path: `/{{moduleName}}/{{moduleName}}_view/${item.id}`
       })
     }
   }

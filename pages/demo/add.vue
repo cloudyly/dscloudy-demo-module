@@ -5,7 +5,7 @@
 <script>
 import DemoDetails from '../../components/demo-details'
 export default {
-  name: 'DemoAdd',
-  components: { DemoDetails }
+  name: '{{componentName}}Add',
+  components: { {{componentName}}Details }
 }
 </script>
