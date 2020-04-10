@@ -23,7 +23,7 @@ export default [
         children: [
           {
             path: '{{moduleName}}_list',
-            component: _import('{{moduleName}}/pages/{{moduleName}}/list'),
+            component: _import('{{moduleName}}/pages/demo/list'),
             name: '{{componentName}}List',
             meta: {
               title: '{{componentName}}',
@@ -40,7 +40,7 @@ export default [
           },
           {
             path: '{{moduleName}}_add',
-            component: _import('{{moduleName}}/pages/{{moduleName}}/add'),
+            component: _import('{{moduleName}}/pages/demo/add'),
             name: '{{componentName}}Add',
             hidden: true,
             meta: {
@@ -50,7 +50,7 @@ export default [
           {
             path: '{{moduleName}}_view/:id(\\d+)',
             hidden: true,
-            component: _import('{{moduleName}}/pages/{{moduleName}}/view'),
+            component: _import('{{moduleName}}/pages/demo/view'),
             name: '{{componentName}}View',
             meta: {
               title: '{{componentName}}-详情'
@@ -59,7 +59,7 @@ export default [
           {
             path: '{{moduleName}}_edit/:id(\\d+)',
             hidden: true,
-            component: _import('{{moduleName}}/pages/{{moduleName}}/edit'),
+            component: _import('{{moduleName}}/pages/demo/edit'),
             name: '{{componentName}}Edit',
             meta: {
               title: '{{componentName}}-编辑'
